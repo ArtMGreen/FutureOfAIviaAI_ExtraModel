@@ -135,7 +135,7 @@ def create_training_data_biased(full_graph,year_start,years_delta,min_edges=1,ed
         day_curr=date(yy,12,31)
         all_edges_curr=full_graph[full_graph[:,2]<(day_curr-day_origin).days]
         adj_mat_sparse_curr = sparse.csr_matrix((np.ones(len(all_edges_curr)), (all_edges_curr[:,0], all_edges_curr[:,1])), shape=(NUM_OF_VERTICES,NUM_OF_VERTICES))
-        G_curr=nx.from_scipy_sparse_matrix(adj_mat_sparse_curr, parallel_edges=False, create_using=nx.MultiGraph)
+        G_curr=nx.from_scipy_sparse_array(adj_mat_sparse_curr, parallel_edges=False, create_using=nx.MultiGraph)
 
         all_G.append(G_curr)
         all_sparse.append(adj_mat_sparse_curr)
