@@ -2,7 +2,7 @@
 
 ## Repository structure
 
-The folder includes the following key files:
+The `extra_model` folder includes the following key files:
 
 - **feature_gen.py**: A script to generate the features for the dataset.
 - **evaluation.py**: A script for evaluating the crafted features.
